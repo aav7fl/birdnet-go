@@ -12,7 +12,7 @@ import (
 
 func manageFfmpegLifecycle(ctx context.Context, config FFmpegConfig, restartChan chan struct{},
 	audioLevelChan chan AudioLevelData) error {
-	backoff := newBackoffStrategy(5, 5*time.Second, 2*time.Minute)
+	backoff := newBackoffStrategy(9999999, 5*time.Second, 2*time.Minute)
 
 	for {
 		// Check if context is done
